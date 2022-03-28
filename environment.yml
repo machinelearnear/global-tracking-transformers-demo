@@ -2,6 +2,9 @@
 #   $ conda env create -f environment.yml
 #   $ conda activate <name>
 name: machinelearnear-gtr
+channels:
+  - conda-forge
+  - pytorch
 dependencies:
   - python=3.8
   - pip
@@ -9,12 +12,14 @@ dependencies:
   - ipykernel
   - ipywidgets
   - gh
+  - pytorch=1.10
+  - torchvision=0.11.1
   - opencv
   - pip:
-    - torch==1.10
     - timm
     - lvis
     - lap
     - scipy
     - git+https://github.com/TAO-Dataset/tao
+    - "detectron2@git+https://github.com/facebookresearch/detectron2.git@v0.6#egg=detectron2"
     # - -r file:requirements.txt
